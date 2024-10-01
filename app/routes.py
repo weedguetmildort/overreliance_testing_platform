@@ -20,7 +20,7 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/')
 def home():
-    return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.2"
+    return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.0"
 
 # @main_bp.route('/')
 # def index():
