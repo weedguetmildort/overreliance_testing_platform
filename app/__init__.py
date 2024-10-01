@@ -1,8 +1,14 @@
 from flask import Flask
 from .routes import main_bp
 
-def create_app():
-    app = Flask(__name__)
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.2.1"
+
+# def create_app():
+#     app = Flask(__name__)
 
     # app.secret_key = 'griffin'
     
@@ -11,8 +17,8 @@ def create_app():
 
     # Register blueprints
     # app.register_blueprint(main_bp)
-    @app.route('/')
-    def index():
-        return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.2.0"
+    # @app.route('/')
+    # def index():
+    #     return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.0"
 
-    return app
+    # return app
