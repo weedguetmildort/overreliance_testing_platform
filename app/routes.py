@@ -1,5 +1,6 @@
+# Necessary imports
 import os
-import logging
+# import logging
 from flask import Blueprint, render_template, request, session, redirect, url_for, jsonify, flash
 from .utils.db import insert_user_response
 from .utils.questions import questions, post_survey_questions, final_survey_questions
@@ -7,16 +8,17 @@ from .utils.demographics import demographics_questions
 from dotenv import load_dotenv, find_dotenv
 from openai import OpenAI
 
+# Initialize variable
 main_bp = Blueprint('main', __name__)
 
-# Load .env variables
+# Load environment variable
 load_dotenv(find_dotenv())
 
-# Set variables
+# Set environment variable
 client = OpenAI(api_key=os.getenv('API_KEY'))
 
 # Set up logging
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 @main_bp.route('/')
 def index():
