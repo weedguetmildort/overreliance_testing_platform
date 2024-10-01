@@ -15,7 +15,11 @@ Sprint 2 (Done)
 - Demographics Page
 - Website Launch GitHub Pages (Not Static) -> Griffin Solution is Recommended
 
-Sprint 3 ()
+Sprint 3 (Done)
+
+- Quality of Development Life Fix
+
+Sprint 4 ()
 
 - Block Responses until recommendations are selected
 - Demographics Collection
@@ -23,8 +27,6 @@ Sprint 3 ()
 - Data Collection Restructure (Models)
 - Frontend Improvements (Warnings, Design)
 -
-
-Sprint 4 ()
 
 Other Optional Tasks:
 
