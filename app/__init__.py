@@ -1,22 +1,16 @@
 from flask import Flask
 from .routes import main_bp
 
-# app = Flask(__name__)
+# def create_app():
+#     app = Flask(__name__)
 
-# @app.route('/')
-# def index():
-#     return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.2.1"
+#     # Register blueprints
+#     app.register_blueprint(main_bp)
+    
+#     return app
 
 def create_app():
     app = Flask(__name__)
-
-    # Register blueprints
-    app.register_blueprint(main_bp)
-    
-    return app
-
-# def create_app():
-#     app = Flask(__name__)
 
     # app.secret_key = 'griffin'
     
@@ -24,9 +18,6 @@ def create_app():
     # app.config.from_object('config.Config')
 
     # Register blueprints
-    # app.register_blueprint(main_bp)
-    # @app.route('/')
-    # def index():
-    #     return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.0"
+    app.register_blueprint(main_bp)
 
-    # return app
+    return app

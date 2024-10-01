@@ -1,5 +1,5 @@
-import os
-import logging
+# import os
+# import logging
 from flask import Blueprint, render_template, request, session, redirect, url_for, jsonify, flash
 # from .utils.db import insert_user_response
 # from .utils.questions import questions, post_survey_questions, final_survey_questions
@@ -8,6 +8,10 @@ from flask import Blueprint, render_template, request, session, redirect, url_fo
 # from openai import OpenAI
 
 main_bp = Blueprint('main', __name__)
+
+# @main_bp.route('/')
+# def home():
+#     return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.1"
 
 # Load .env variables
 # load_dotenv(find_dotenv())
@@ -19,11 +23,7 @@ main_bp = Blueprint('main', __name__)
 # logging.basicConfig(level=logging.DEBUG)
 
 @main_bp.route('/')
-def home():
-    return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.0"
-
-# @main_bp.route('/')
-# def index():
+def index():
     # session.clear()
     # session['question_index'] = 0
     # session['answers'] = []
@@ -32,5 +32,4 @@ def home():
     # session['chat_history'] = []
     # session['user'] = []
     # session['user_id'] = []
-    # return render_template('index.html')
-    # return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.0"
+    return render_template('index.html')
