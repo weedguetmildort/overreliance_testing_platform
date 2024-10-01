@@ -10,6 +10,9 @@ def create_app():
     # app.config.from_object('config.Config')
 
     # Register blueprints
-    app.register_blueprint(main_bp)
+    # app.register_blueprint(main_bp)
+    @app.route('/')
+    def index():
+        return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.2.0"
 
     return app
