@@ -11,6 +11,7 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+dist-ssr/
 downloads/
 eggs/
 .eggs/
@@ -25,6 +26,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+node_modules
+*.local
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -129,6 +132,13 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+Server/.env
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Spyder project settings
 .spyderproject
@@ -159,4 +169,18 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+
+# VS Code
+/.vs
+/.vscode
+!.vscode/extensions.json
+*.vsidx
+
+# Other Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
