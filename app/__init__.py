@@ -1,8 +1,15 @@
 from flask import Flask
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Flask heroku app."
+    # app.secret_key = 'griffin'
+    
+    # Load configuration
+    # app.config.from_object('config.Config')
 
+    # Register blueprints
+    from .routes import main_bp
+    app.register_blueprint(main_bp)
+
+    return app
