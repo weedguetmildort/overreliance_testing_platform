@@ -19,7 +19,11 @@ main_bp = Blueprint('main', __name__)
 # logging.basicConfig(level=logging.DEBUG)
 
 @main_bp.route('/')
-def index():
+def home():
+    return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.1"
+
+# @main_bp.route('/')
+# def index():
     # session.clear()
     # session['question_index'] = 0
     # session['answers'] = []
@@ -29,4 +33,4 @@ def index():
     # session['user'] = []
     # session['user_id'] = []
     # return render_template('index.html')
-    return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.0.3"
+    # return "Overreliance Testing Platform (Flask Heroku App) Version -- 0.3.0"
