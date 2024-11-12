@@ -411,12 +411,13 @@ h2 {
 }
 
 .likert-scale {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: #f8f9fa;
   padding: 15px;
   border-radius: 4px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .likert-option {
