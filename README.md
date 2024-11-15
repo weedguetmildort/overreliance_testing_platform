@@ -63,18 +63,14 @@ Sprint 9 (Done) 11/12/2024
 - Database Reintegration
 - Excel sheet test run from DB
 - Test length/duration (20 min w/ 17 Q's)
+- Add info pages between Consent/Demographics and Quiz
+- Reduce Number of wrong questions to 5/15
 
 Sprint 10 () 11/19/2024 #---------NEXT SPRINT---------#
 
-From Previous Sprint
-(Griffin)
-
-- Add info pages between Consent/Demographics and Quiz
-- Reduce Number of wrong questions to 5/15 (Current: 6/15)
-
-(weedguet)
-
 - Fix bot bypass to prevent correct answer
+- Align questions with correct value
+- Make Survey Questions font bigger
 
 OPTIONAL TODO
 
