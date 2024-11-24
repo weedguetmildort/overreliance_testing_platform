@@ -83,17 +83,17 @@ def insert_user_response(responses):
 
     _id = insert_user(responses["email"])
 
+    # Check if user already exist in db
     if (_id == -1):
         print("User already exist!")
         return
 
-    responses["email"]
-    responses["uf_id"]
-    responses["question_order"]
-    responses["answers"]
-    responses["post_survey_answers"]
-    responses["final_survey_answers"]
-
+    # responses["uf_id"]
+    # responses["question_order"]
+    # responses["answers"]
+    # responses["post_survey_answers"]
+    # responses["final_survey_answers"]
+    # responses["chat_history"]
 
     users_collection = init_db()
     from bson.objectid import ObjectId
@@ -107,7 +107,8 @@ def insert_user_response(responses):
             "question_order": responses["question_order"],
             "answers": responses["answers"],
             "post_survey_answers": responses["post_survey_answers"],
-            "final_survey_answers": responses["final_survey_answers"]
+            "final_survey_answers": responses["final_survey_answers"],
+            "chat_history": responses["chat_history"]
         }
     }
     result = users_collection.update_one(query, update)

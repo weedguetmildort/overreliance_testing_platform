@@ -7,275 +7,563 @@
         <!-- Programming Self-Efficacy questions -->
         <div class="form-group">
             <div class="likert-group">
-                <p>I feel confident in my ability to write code</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="pse2_{{ i }}" name="problem_solving_confidence" value="{{ i }}" required>
-                        <label for="pse2_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I am confident in my ability to program independently</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="independent_programming" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
                 
-                <p>I feel confident in my ability to solve programming problems</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="pse2_{{ i }}" name="problem_solving_confidence" value="{{ i }}" required>
-                        <label for="pse2_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I can learn new programming languages independently</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="learn_languages" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
 
-                <p>I feel confident in my coding skills</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="pse3_{{ i }}" name="coding_skills_confidence" value="{{ i }}" required>
-                        <label for="pse3_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I can identify when my code needs improvement</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="identify_improvements" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
 
         <!-- General Trust in AI questions -->
-                <p>I could depend on an AI chatbot for assistance while programming</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="trust1_{{ i }}" name="ai_dependability" value="{{ i }}" required>
-                        <label for="trust1_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>When working with an AI assistant while programming, I feel I can depend on the AI assistant</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="ai_dependability" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
                 
-                <p>I could trust an AI chatbot for assistance when writing code</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="trust2_{{ i }}" name="ai_reliability" value="{{ i }}" required>
-                        <label for="trust2_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I can rely on AI for effective assistance with coding tasks</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="ai_reliability" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
 
-                <p>In general, I could count on AI chatbots for assistance while learning</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="trust3_{{ i }}" name="ai_trust" value="{{ i }}" required>
-                        <label for="trust3_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I feel I can count on AI to explain programming concepts clearly</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="ai_explanation" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
             
-        <!-- Compatibility questions -->
-                <p>Using an AI chatbot would fit well with the way I like to get assistance</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="comp1_{{ i }}" name="learning_fit" value="{{ i }}" required>
-                        <label for="comp1_{{ i }}">{{ i }}</label>
+        <!-- Concerns for trust -->
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I worry about becoming too dependent on AI</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="ai_dependency" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
-                </div>
-
-                <p>Using an AI chatbot as a learning aid would be an extension of how I like to get help</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="comp2_{{ i }}" name="learning_extension" value="{{ i }}" required>
-                        <label for="comp2_{{ i }}">{{ i }}</label>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
                 </div>
 
-                <p>I could integrate an AI chatbot into my existing learning practices</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="comp3_{{ i }}" name="integration_possibility" value="{{ i }}" required>
-                        <label for="comp3_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I am concerned that AI might give me incorrect advice</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="incorrect_advice" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
-                </div>
-
-        <!-- General Interest in Learning questions -->
-                <p>I enjoy learning new things in general</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="gi1_{{ i }}" name="learning_enjoyment" value="{{ i }}" required>
-                        <label for="gi1_{{ i }}">{{ i }}</label>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
                 </div>
 
-                <p>I seek out opportunities to expand my knowledge</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="gi2_{{ i }}" name="knowledge_seeking" value="{{ i }}" required>
-                        <label for="gi2_{{ i }}">{{ i }}</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I feel uncertain about blindly trusting AI's suggestions</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="blind_trust" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
-                </div>
-
-                <p>I find satisfaction in mastering new skills or concepts</p>
-                <div class="likert-scale">
-                    {% for i in range(1, 8) %}
-                    <div class="likert-option">
-                        <input type="radio" id="gi3_{{ i }}" name="mastery_satisfaction" value="{{ i }}" required>
-                        <label for="gi3_{{ i }}">{{ i }}</label>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
                     </div>
-                    {% endfor %}
-                </div>
-                <div class="likert-scale">
-                    <div>Strongly<br/>Disagree</div>
-                    <div>Disagree</div>
-                    <div>Somewhat<br/>Disagree</div>
-                    <div>Neutral</div>
-                    <div>Somewhat<br/>Agree</div>
-                    <div>Agree</div>
-                    <div>Strongly<br/>Agree</div>
                 </div>
 
-        <!-- Prior AI Experience questions -->
-        <div class="form-group">
-            <div class="likert-group">
-                <p>How often do you interact with AI chatbots?</p>
-                <select name="ai_frequency" required class="select-input">
-                    <option value="">Select frequency</option>
-                    <option value="none">Do not use AI chatbots</option>
-                    <option value="monthly">Once a month or less</option>
-                    <option value="biweekly">2-3 times a month</option>
-                    <option value="weekly">Once a week</option>
-                    <option value="frequent">3-5 times a week</option>
-                    <option value="daily">Once a day or more</option>
-                </select>
-
-                <p>Which AI chatbots have you used in the past year?</p>
-                <div class="checkbox-grid">
-                    <label><input type="checkbox" name="chatbots" value="chatgpt"> OpenAI's ChatGPT</label>
-                    <label><input type="checkbox" name="chatbots" value="gemini"> Google's Gemini</label>
-                    <label><input type="checkbox" name="chatbots" value="claude"> Anthropic's Claude</label>
-                    <label><input type="checkbox" name="chatbots" value="copilot"> Microsoft's Copilot</label>
-                    <label><input type="checkbox" name="chatbots" value="customer"> Company Customer Service Chatbot</label>
-                    <label><input type="checkbox" name="chatbots" value="other"> Other</label>
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I worry that using AI might hinder my learning</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="learning_hindrance" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
                 </div>
 
-                <p>How has your AI chatbot use changed over the past year?</p>
-                <select name="ai_usage_change" required class="select-input">
-                    <option value="">Select change</option>
-                    <option value="significant_decrease">Significantly decreased</option>
-                    <option value="slight_decrease">Slightly decreased</option>
-                    <option value="same">Stayed about the same</option>
-                    <option value="slight_increase">Slightly increased</option>
-                    <option value="significant_increase">Significantly increased</option>
-                    <option value="started">Started using within past year</option>
-                </select>
+        <!-- Need for Cognition -->
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I enjoy understanding how code works rather than just getting it to work</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="code_understanding" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
+                </div>
+
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I like exploring different solutions to programming problems</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="solution_exploration" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
+                </div>
+
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I seek to understand the underlying concepts when learning programming</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="concept_understanding" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
+                </div>
+
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I prefer figuring out solutions before asking for help</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="self_solving" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
+                </div>
+
+                <hr size="1" class="hrline" color="f1f1f1">
+                <p>I enjoy the process of solving complex problems</p>
+                <div>
+                    <div class="likert-scale">
+                        {% for i in range(1, 8) %}
+                        <div class="likert-option">
+                            <input type="radio" id="pse2_{{ i }}" name="complex_problems" value="{{ i }}" required>
+                            
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="likert-scale">
+                        <div>Strongly<br/>Disagree</div>
+                        <div>Disagree</div>
+                        <div>Somewhat<br/>Disagree</div>
+                        <div>Neutral</div>
+                        <div>Somewhat<br/>Agree</div>
+                        <div>Agree</div>
+                        <div>Strongly<br/>Agree</div>
+                    </div>
+                </div>
+
+        <!-- Programming Literacy -->
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I understand fundamental programming concepts (variables, loops, functions)</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="fundamental_concepts" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
             </div>
         </div>
 
-        <button type="submit" class="btn">Continue to Quiz</button>
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I can read and comprehend code written by others</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="code_comprehension" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I can identify and use appropriate data structures</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="data_structures" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I understand object-oriented programming principle</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="oop_principles" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I can explain programming concepts to others</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="explain_concepts" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I am proficient in programming in one or more programming languages</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="language_proficiency" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <!-- AI Literacy -->
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I understand the basic principles of how AI systems work</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="ai_principles" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I can identify appropriate use cases for AI in programming</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="ai_use_cases" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I understand the risks and biases of AI assistants</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="ai_risks" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <p>I can effectively prompt AI tools to get desired results</p>
+        <div>
+            <div class="likert-scale">
+                {% for i in range(1, 8) %}
+                <div class="likert-option">
+                    <input type="radio" id="pse2_{{ i }}" name="ai_prompting" value="{{ i }}" required>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="likert-scale">
+                <div>Strongly<br/>Disagree</div>
+                <div>Disagree</div>
+                <div>Somewhat<br/>Disagree</div>
+                <div>Neutral</div>
+                <div>Somewhat<br/>Agree</div>
+                <div>Agree</div>
+                <div>Strongly<br/>Agree</div>
+            </div>
+        </div>
+
+        <hr size="1" class="hrline" color="f1f1f1">
+        <button type="submit" class="survey-btn">Continue</button>
     </form>
 </div>
 {% endblock %}
