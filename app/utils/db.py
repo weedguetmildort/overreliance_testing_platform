@@ -108,7 +108,10 @@ def insert_user_response(responses):
             "answers": responses["answers"],
             "post_survey_answers": responses["post_survey_answers"],
             "final_survey_answers": responses["final_survey_answers"],
-            "chat_history": responses["chat_history"]
+            "chat_history": responses["chat_history"],
+            "firstName" : responses["firstName"],
+            "lastName" : responses["lastName"],
+            "classSchool" : responses["classSchool"]
         }
     }
     result = users_collection.update_one(query, update)
