@@ -55,6 +55,10 @@ def index():
     session["chat_history"] = []
     session["user"] = []
     session["user_id"] = []
+    session["firstName"] = []
+    session["lastName"] = []
+    session["classSchool"] = []
+    
     return render_template("index.html")
 
 @main_bp.route("/email_error")
@@ -101,6 +105,9 @@ def collect_demographics():
 def validate_email():
     email = request.form.get("email")
     user_id = request.form.get("id_number")
+    first_name = request.form.get("firstName")
+    last_name = request.form.get("lastName")
+    student_class = request.form.get("classSchool")
 
     if not email:
         return redirect(url_for("main.email_error"))
@@ -113,6 +120,9 @@ def validate_email():
     session["user"] = email
     if user_id:
         session["user_id"] = user_id
+        session["firstName"] = first_name
+        session["lastName"] = last_name
+        session["classSchool"] = student_class
 
     if find_user(email):
         return redirect(url_for("main.thank_you"))
@@ -297,6 +307,9 @@ def final_survey():
         combined_data["post_survey_answers"] = session.get("post_survey_answers")
         combined_data["final_survey_answers"] = session.get("final_survey_answers")
         combined_data["chat_history"] = session.get("chat_history")
+        combined_data["firstName"] = session.get("firstName")
+        combined_data["lastName"] = session.get("lastName")
+        combined_data["classSchool"] = session.get("classSchool")
 
         insert_user_response(combined_data)
 

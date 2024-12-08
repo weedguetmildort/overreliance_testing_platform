@@ -89,6 +89,8 @@ Sprint 11 (Done) 11/26/2024
 
 Sprint 12 () 12/03/2024 #---------NEXT SPRINT---------#
 
+-   Post-Survey line before button
+-   Post survey order
 -   Fix bot bypass to prevent correct answer
 
 OPTIONAL TODO
