@@ -1,6 +1,7 @@
 # Libraries
 import os
 import pprint
+import datetime
 
 # Imports
 from dotenv import load_dotenv, find_dotenv
@@ -111,7 +112,9 @@ def insert_user_response(responses):
             "chat_history": responses["chat_history"],
             "firstName" : responses["firstName"],
             "lastName" : responses["lastName"],
-            "classSchool" : responses["classSchool"]
+            "classSchool" : responses["classSchool"],
+            "demographics" : responses["demographics"],
+            "timestamp" : datetime.datetime.now(),
         }
     }
     result = users_collection.update_one(query, update)

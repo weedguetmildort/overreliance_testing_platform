@@ -87,17 +87,25 @@ Sprint 11 (Done) 11/26/2024
 -   Add error pages for invalid email
 -   Restrict duplicate use from homepage
 
-Sprint 12 () 12/03/2024 #---------NEXT SPRINT---------#
+Sprint 12 () 2/04/2025
+
+-   Demographics data collection
+-   Add timestamp
+-   Optimize questions randomizer
+-   Update website
+
+Sprint 13 () 2/11/2025 #---------NEXT SPRINT---------#
+
+OPTIONAL TODO
 
 -   Post-Survey line before button
 -   Post survey order
 -   Fix bot bypass to prevent correct answer
 
-OPTIONAL TODO
-
 -   Frontend Improvements
 -   Documentation
 -   Implement continuation/resume
+-   Age, gender, major, CS completion percentage, AI Experience
 
 CONCERNS
 

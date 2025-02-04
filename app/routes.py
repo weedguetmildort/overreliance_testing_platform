@@ -48,6 +48,7 @@ def index():
     random.shuffle(misleading_indices)
     random.shuffle(normal_indices)
     session["question_order"] = misleading_indices + normal_indices
+    random.shuffle(session["question_order"])
     session["question_index"] = 0
     session["answers"] = []
     session["post_survey_answers"] = []
@@ -58,6 +59,7 @@ def index():
     session["firstName"] = []
     session["lastName"] = []
     session["classSchool"] = []
+    session["demographics"] = []
     
     return render_template("index.html")
 
@@ -79,21 +81,16 @@ def collect_consent():
 def collect_demographics():
     if request.method == "POST":
         demographics_data = {
-            "age_category": request.form.get("age_category"),
+            "age_category": request.form.get("age"),
             "gender": request.form.get("gender"),
             "ethnicity": request.form.getlist("ethnicity"),
-            "ai_usage": request.form.get("ai_usage"),
+            "ai_usage": request.form.get("ai_experience"),
             "ai_frequency": request.form.get("ai_frequency"),
             "ai_use_type": request.form.getlist("ai_use_type"),
-            "academic_level": request.form.get("academic_level"),
-            "major_category": request.form.get("major_category"),
+            "academic_level": request.form.get("year"),
+            "major_category": request.form.get("major"),
+            "minor_category": request.form.get("minor"),
             "gpa": request.form.get("gpa"),
-            "programming_education": request.form.get("programming_education"),
-            "courses_completed": request.form.get("courses_completed"),
-            "practical_experience": request.form.get("practical_experience"),
-            "learning_preference": request.form.get("learning_preference"),
-            "problem_solving": request.form.get("problem_solving"),
-            "study_time": request.form.get("study_time"),
         }
         session["demographics"] = demographics_data
         return redirect(url_for("main.pre_survey"))
@@ -288,13 +285,13 @@ def final_survey():
         }
         session["final_survey_answers"] = survey_data
 
-        print("Session Data Summary:")
-        print(f"email: {session.get('user')}")
-        print(f"uf id: {session.get('user_id')}")
-        print(f"Question Order: {session.get('question_order')}")
-        print(f"Answers: {session.get('answers')}")
-        print(f"Post-survey answers: {session.get('post_survey_answers')}")
-        print(f"Final survey answers: {session.get('final_survey_answers')}")
+        #print("Session Data Summary:")
+        #print(f"email: {session.get('user')}")
+        #print(f"uf id: {session.get('user_id')}")
+        #print(f"Question Order: {session.get('question_order')}")
+        #print(f"Answers: {session.get('answers')}")
+        #print(f"Post-survey answers: {session.get('post_survey_answers')}")
+        #print(f"Final survey answers: {session.get('final_survey_answers')}")
 
         # Create an empty dictionary to hold all the data
         combined_data = {}
@@ -310,6 +307,9 @@ def final_survey():
         combined_data["firstName"] = session.get("firstName")
         combined_data["lastName"] = session.get("lastName")
         combined_data["classSchool"] = session.get("classSchool")
+        combined_data["demographics"] = session.get("demographics")
+
+        #print(f"Demographics answers: {session.get('demographics')}")
 
         insert_user_response(combined_data)
 
