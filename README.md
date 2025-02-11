@@ -87,14 +87,23 @@ Sprint 11 (Done) 11/26/2024
 -   Add error pages for invalid email
 -   Restrict duplicate use from homepage
 
-Sprint 12 () 2/04/2025
+Sprint 12 (Done) 2/04/2025
 
 -   Demographics data collection
 -   Add timestamp
 -   Optimize questions randomizer
 -   Update website
 
-Sprint 13 () 2/11/2025 #---------NEXT SPRINT---------#
+Sprint 13 () 2/11/2025
+
+-   Fix pre-survey data collection
+-   Add question timer
+
+Sprint 14 () 2/18/2025 #---------NEXT SPRINT---------#
+
+-   Read example from Dr. Rani
+-   Write methods section
+-   Add comments to code
 
 OPTIONAL TODO
 

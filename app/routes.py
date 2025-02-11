@@ -1,5 +1,6 @@
 # Necessary imports
 import os
+import time
 import random
 import json
 
@@ -49,6 +50,7 @@ def index():
     random.shuffle(normal_indices)
     session["question_order"] = misleading_indices + normal_indices
     random.shuffle(session["question_order"])
+    session["pre_survey_data"] = []
     session["question_index"] = 0
     session["answers"] = []
     session["post_survey_answers"] = []
@@ -60,6 +62,11 @@ def index():
     session["lastName"] = []
     session["classSchool"] = []
     session["demographics"] = []
+    session["times"] = []
+    session["begin"] = 0
+    session["elapsed_time"] = 0
+    session["end_time"] = 0
+    session["start_time"] = 0
     
     return render_template("index.html")
 
@@ -138,6 +145,10 @@ def quiz():
 
     if "question_order" not in session:
         return redirect(url_for("main.index"))
+    
+    if session["begin"] == 0:
+        session["begin"] = 1
+        session["start_time"] = time.time()
 
     if request.method == "POST":
         if "answer" in request.form:
@@ -153,6 +164,11 @@ def quiz():
                 session["question_order"][session["question_index"]],
                 answer_data,
             )
+            insert_at_index(
+                session["times"],
+                session["question_order"][session["question_index"]],
+                session["elapsed_time"],
+            )
 
             # Add divider to chat history
             session["chat_history"] = session.get("chat_history", [])
@@ -162,6 +178,11 @@ def quiz():
                     f"――――――― End of Question {session['question_index'] + 1} ―――――――",
                 )
             )
+
+            if session["begin"] == 1:
+                session["begin"] = 0
+                session["end_time"] = time.time()
+                session["elapsed_time"] = session["end_time"] - session["start_time"]
 
             return redirect(url_for("main.post_survey"))
 
@@ -177,6 +198,8 @@ def quiz():
         )
     else:
         return redirect(url_for("main.final_survey"))
+    
+    
 
 
 @main_bp.route("/get_initial_recommendation", methods=["GET"])
@@ -234,16 +257,31 @@ def chat():
 def pre_survey():
     if request.method == "POST":
         survey_data = {
-            "programming_confidence": request.form.get("programming_confidence"),
-            "problem_solving_confidence": request.form.get(
-                "problem_solving_confidence"
-            ),
+            "independent_programming": request.form.get("independent_programming"),
+            "learn_languages": request.form.get("learn_languages"),
+            "identify_improvements": request.form.get("identify_improvements"),
             "ai_dependability": request.form.get("ai_dependability"),
             "ai_reliability": request.form.get("ai_reliability"),
-            "ai_understanding": request.form.get("ai_understanding"),
-            "ai_limitations": request.form.get("ai_limitations"),
-            "programming_experience": request.form.get("programming_experience"),
-            "programming_concepts": request.form.getlist("concepts"),
+            "ai_explanation": request.form.get("ai_explanation"),
+            "ai_dependency": request.form.get("ai_dependency"),
+            "incorrect_advice": request.form.get("incorrect_advice"),
+            "blind_trust": request.form.get("blind_trust"),
+            "learning_hindrance": request.form.get("learning_hindrance"),
+            "code_understanding": request.form.get("code_understanding"),
+            "solution_exploration": request.form.get("solution_exploration"),
+            "concept_understanding": request.form.get("concept_understanding"),
+            "self_solving": request.form.get("self_solving"),
+            "complex_problems": request.form.get("complex_problems"),
+            "fundamental_concepts": request.form.get("fundamental_concepts"),
+            "code_comprehension": request.form.get("code_comprehension"),
+            "data_structures": request.form.get("data_structures"),
+            "oop_principles": request.form.get("oop_principles"),
+            "explain_concepts": request.form.get("explain_concepts"),
+            "language_proficiency": request.form.get("language_proficiency"),
+            "ai_principles": request.form.get("ai_principles"),
+            "ai_use_cases": request.form.get("ai_use_cases"),
+            "ai_risks": request.form.get("ai_risks"),
+            "ai_prompting": request.form.get("ai_prompting"),
         }
         session["pre_survey_data"] = survey_data
         return redirect(url_for("main.instructions"))
@@ -301,6 +339,7 @@ def final_survey():
         combined_data["uf_id"] = session.get("user_id")
         combined_data["question_order"] = session.get("question_order")
         combined_data["answers"] = session.get("answers")
+        combined_data["pre_survey_answers"] = session.get("pre_survey_data")
         combined_data["post_survey_answers"] = session.get("post_survey_answers")
         combined_data["final_survey_answers"] = session.get("final_survey_answers")
         combined_data["chat_history"] = session.get("chat_history")
@@ -308,6 +347,7 @@ def final_survey():
         combined_data["lastName"] = session.get("lastName")
         combined_data["classSchool"] = session.get("classSchool")
         combined_data["demographics"] = session.get("demographics")
+        combined_data["times"] = session.get("times")
 
         #print(f"Demographics answers: {session.get('demographics')}")
 
