@@ -104,6 +104,8 @@ Sprint 14 () 2/18/2025 #---------NEXT SPRINT---------#
 -   Read example from Dr. Rani
 -   Write methods section
 -   Add comments to code
+-   Timer reset glitch
+-   Warning messages glitch
 
 OPTIONAL TODO
 

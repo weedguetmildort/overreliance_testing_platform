@@ -316,10 +316,23 @@ def post_survey():
 def final_survey():
     if request.method == "POST":
         survey_data = {
-            "overall_trust": request.form.get("overall_trust"),
-            "helpfulness": request.form.get("helpfulness"),
-            "inconsistencies": request.form.get("inconsistencies"),
-            "future_use": request.form.get("future_use"),
+            "blind_acceptance": request.form.get("blind_acceptance"),
+            "questioned_recommendations": request.form.get("questioned_recommendations"),
+            "immediate_usage": request.form.get("immediate_usage"),
+            "verified_answers": request.form.get("verified_answers"),
+            "reliable_advice": request.form.get("reliable_advice"),
+            "trustworthy_explanations": request.form.get("trustworthy_explanations"),
+            "count_recommendations": request.form.get("count_recommendations"),
+            "depend_solving": request.form.get("depend_solving"),
+            "recommendations_helpful": request.form.get("recommendations_helpful"),
+            "explanations_clear": request.form.get("explanations_clear"),
+            "appropriate_responses": request.form.get("appropriate_responses"),
+            "quality_satisfaction": request.form.get("quality_satisfaction"),
+            "careful_consideration": request.form.get("careful_consideration"),
+            "knowledge_combination": request.form.get("knowledge_combination"),
+            "own_decisions": request.form.get("own_decisions"),
+            "critical_evaluation": request.form.get("critical_evaluation"),
+            "independence": request.form.get("independence"),
         }
         session["final_survey_answers"] = survey_data
 
