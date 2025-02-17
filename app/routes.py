@@ -105,7 +105,7 @@ def collect_demographics():
     return render_template("demographics.html")
 
 
-@main_bp.route("/validate_email", methods=["POST"])
+@main_bp.route("/validate_email", methods=["GET", "POST"])
 def validate_email():
     email = request.form.get("email")
     user_id = request.form.get("id_number")
@@ -159,6 +159,12 @@ def quiz():
                 "is_misleading": questions[current_q_index]["is_misleading"],
                 "correct_answer": questions[current_q_index]["correct"],
             }
+
+            if session["begin"] == 1:
+                session["begin"] = 0
+                session["end_time"] = time.time()
+                session["elapsed_time"] = session["end_time"] - session["start_time"]
+
             insert_at_index(
                 session["answers"],
                 session["question_order"][session["question_index"]],
@@ -178,11 +184,6 @@ def quiz():
                     f"――――――― End of Question {session['question_index'] + 1} ―――――――",
                 )
             )
-
-            if session["begin"] == 1:
-                session["begin"] = 0
-                session["end_time"] = time.time()
-                session["elapsed_time"] = session["end_time"] - session["start_time"]
 
             return redirect(url_for("main.post_survey"))
 

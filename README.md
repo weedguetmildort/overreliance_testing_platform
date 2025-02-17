@@ -97,15 +97,19 @@ Sprint 12 (Done) 2/04/2025
 Sprint 13 () 2/11/2025
 
 -   Fix pre-survey data collection
+-   Fix post-survey data collection
 -   Add question timer
+
+Sprint 14 () 2/18/2025 #---------NEXT SPRINT---------#
+
+-   Timer reset glitch
+-   Warning messages glitch
 
 Sprint 14 () 2/18/2025 #---------NEXT SPRINT---------#
 
 -   Read example from Dr. Rani
 -   Write methods section
 -   Add comments to code
--   Timer reset glitch
--   Warning messages glitch
 
 OPTIONAL TODO
 
