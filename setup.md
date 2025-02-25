@@ -16,7 +16,7 @@ python3 -m venv <virtual_environment_name>
 install
 
 ```shell
-git clone https://github.com/griffin-pitts/Overreliance-Testing-Platform.git
+git clone https://github.com/weedguetmildort/overreliance_testing_platform.git
 pip install -r requirements.txt
 ```
 
