@@ -26,10 +26,8 @@ def init_db():
     # Initialize MongoDB client
     client = MongoClient(uri)
 
-    # Update later in production environment ---------------------------------- <<<
     # Connect to database
     users_db = client.test
-    # ------------------------------------------------------------------------- <<<
 
     # Define your collections
     return users_db.users
@@ -89,19 +87,11 @@ def insert_user_response(responses):
         print("User already exist!")
         return
 
-    # responses["uf_id"]
-    # responses["question_order"]
-    # responses["answers"]
-    # responses["post_survey_answers"]
-    # responses["final_survey_answers"]
-    # responses["chat_history"]
-
     users_collection = init_db()
     from bson.objectid import ObjectId
    
-
     query = {"_id": _id}
-
+    # Add data to database if it does not exist
     update = {
         "$set": {
             "uf_id": responses["uf_id"],
@@ -125,6 +115,5 @@ def insert_user_response(responses):
         print("success!")
     else:
         print("failed!")
-
 
 # Add more functions as needed

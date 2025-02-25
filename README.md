@@ -94,21 +94,25 @@ Sprint 12 (Done) 2/04/2025
 -   Optimize questions randomizer
 -   Update website
 
-Sprint 13 () 2/11/2025
+Sprint 13 (Done) 2/11/2025
 
 -   Fix pre-survey data collection
 -   Fix post-survey data collection
 -   Add question timer
 
-Sprint 14 () 2/18/2025 #---------NEXT SPRINT---------#
+Sprint 14 (Done) 2/18/2025
 
 -   Timer reset glitch
+
+Sprint 14 (Done) 2/25/2025
+
+-   Link Fix
+
+Sprint 14 () 3/04/2025 #---------NEXT SPRINT---------#
+
 -   Warning messages glitch
-
-Sprint 14 () 2/18/2025 #---------NEXT SPRINT---------#
-
 -   Read example from Dr. Rani
--   Write methods section
+-   Write methods/system description section
 -   Add comments to code
 
 OPTIONAL TODO
@@ -116,11 +120,9 @@ OPTIONAL TODO
 -   Post-Survey line before button
 -   Post survey order
 -   Fix bot bypass to prevent correct answer
-
 -   Frontend Improvements
 -   Documentation
 -   Implement continuation/resume
--   Age, gender, major, CS completion percentage, AI Experience
 
 CONCERNS
 
