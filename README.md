@@ -108,6 +108,13 @@ Sprint 14 (Done) 2/25/2025
 
 -   Link Fix
 
+---------------------------------------------------------------------------------
+
+Next Iteration
+- New Database Update methods to avoid data loss
+- More modular, to be able to test more and faster build
+- Improve AI
+
 Sprint 14 () 3/04/2025 #---------NEXT SPRINT---------#
 
 -   Warning messages glitch

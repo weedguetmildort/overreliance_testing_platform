@@ -3,6 +3,7 @@ import os
 import time
 import random
 import json
+from .utils.db import *
 
 # import logging
 from flask import (
@@ -128,9 +129,25 @@ def validate_email():
         session["lastName"] = last_name
         session["classSchool"] = student_class
 
-    if find_user(email):
+    user_object_id = find_user(email)
+
+    if user_object_id:
+        # Load state information if survey is not complete ----------------------------------------------------------------------- TO DO
+        print("Old User: ")
+        print(user_object_id)
+
+        # Return thank you page if survey is already complete
         return redirect(url_for("main.thank_you"))
     
+    # Update DB with new User info ----------------------------------------------------------------------- TO DO
+    user_object_id = insert_email(email)
+    print("New User: ")
+    print(user_object_id)
+    insert_uf_id(user_object_id, user_id)
+    insert_firstName(user_object_id, first_name)
+    insert_lastName(user_object_id, last_name)
+    insert_classSchool(user_object_id, student_class)
+
     return redirect(
         url_for("main.collect_consent")
     )  # Change 'quiz' to the route that handles the quiz

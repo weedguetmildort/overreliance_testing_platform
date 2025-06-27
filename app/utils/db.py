@@ -30,8 +30,8 @@ def init_db():
     users_db = client.test
 
     # Define your collections
-    return users_db.users
-
+    # return users_db.users
+    return users_db.test
 
 def find_user(user_email):
 
@@ -44,11 +44,11 @@ def find_user(user_email):
 
         # Compare email
         if email == user_email:
-            return True
+            return user.get("_id")
   
     return False
 
-def insert_user(user_email):
+def insert_email(user_email):
     users_collection = init_db()
 
     # Check if user already exists
@@ -68,6 +68,58 @@ def insert_user(user_email):
     print("User successfully added!")
     return result.inserted_id
 
+
+# Check if survey is already completed
+def is_complete(object_id):
+    return False
+
+# Insert user basic information
+def insert_uf_id(object_id, uf_id):
+    print(object_id)
+    if uf_id:
+        print(uf_id)
+    return
+
+def insert_firstName(object_id, firstName):
+    completion_status = is_complete(object_id)
+
+    # Check if user already exist in db
+    if not completion_status:
+        print("User already completed survey!")
+        return
+
+    users_collection = init_db()
+    from bson.objectid import ObjectId
+   
+    query = {"_id": _id}
+    # Add data to database if it does not exist
+    update = {
+        "$set": {
+            "firstName" : firstName,
+        }
+    }
+    result = users_collection.update_one(query, update)
+
+    if result:
+        print("success!")
+    else:
+        print("failed!")
+
+
+def insert_lastName(object_id, lastName):
+    print(object_id)
+    print(lastName)
+    return
+
+def insert_classSchool(object_id, classSchool):
+    print(object_id)
+    print(classSchool)
+    return
+
+
+
+
+
 def update_user(user_email, updated_data):
     users_collection = init_db()
     # Update user data by email
@@ -80,7 +132,7 @@ def delete_user(user_email):
 
 def insert_user_response(responses):
 
-    _id = insert_user(responses["email"])
+    _id = insert_email(responses["email"])
 
     # Check if user already exist in db
     if (_id == -1):
